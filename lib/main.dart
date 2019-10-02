@@ -15,6 +15,10 @@ void main() {
           centerTitle: true,
           backgroundColor: Colors.green,
           title: Text('Business Card'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.share), onPressed: pressShare),
+            IconButton(icon: Icon(Icons.refresh), onPressed: pressRefresh)
+          ],
         ),
         body: Center(
           child: Column(
@@ -35,6 +39,12 @@ void main() {
               ),
               ),
 
+              Container(
+                color: Colors.white,
+                height: 2.0,
+                width: 80,
+                margin: EdgeInsets.fromLTRB(0, 20, 0, 20)
+              ),
               Text(
                   "Flutter Developer", style: TextStyle(
                 fontFamily: "Lobster",
@@ -85,4 +95,12 @@ void main() {
 
 void copyContent(){
   print("Wow, you pressed this Button!");
+}
+
+void pressShare(){
+  print("Share was pressed.");
+}
+
+void pressRefresh(){
+  print("Refresh");
 }
